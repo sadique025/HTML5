@@ -1,0 +1,34 @@
+<html>
+<body>
+<p>Count Number<output id="result"></output></p>
+<button onclick="startWorker()">start worker</button>
+<button onclick="stopWorker()">stop worker</button>
+
+<script>
+var w;
+
+function startWorker(){
+if(typeof(Worker)!=="undefined"){
+w=new Worker("webdemonew.js");
+
+}
+w.onmessage=function(event){
+document.getElementById("result").innerHTML=event.data;
+console.log(event);
+};
+}
+else{
+document.getElementById("result").innerHTML="sorry! no web worker support.";
+}
+}
+function stopWorker(){
+w.terminate();
+w=undefined;
+}
+
+
+
+
+</script>
+</body>
+</html>

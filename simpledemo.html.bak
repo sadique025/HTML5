@@ -1,0 +1,53 @@
+<html>
+<head>
+<style>
+
+div{
+width:200px;
+height:200px;
+border:2px solid red;
+}
+
+</style>
+<script>
+
+function fun1(event)
+{
+event.dataTransfer.setData("text/plain",event.currentTarget.textContent);
+event.dataTransfer.setData("text/data-marks",event.currentTarget.dataset.marks);
+}
+
+function dragover2(event)
+{
+event.preventDefault();
+}
+
+function drop2(event)
+{
+str=event.dataTransfer.getData("text/plain");
+val=event.dataTransfer.getData("text/data-marks");
+event.currentTarget.innerHTML + ="<li>"+str+"----"+val+"</li>";
+
+}
+
+
+
+
+</script>
+</head>
+
+
+
+</body>
+<ul>
+<li draggable="true" ondragstart="fun1(event)" data-marks=60>red</li>
+
+<li draggable="true" ondragstart="fun1(event)" data-marks=70>green</li>
+
+<li draggable="true" ondragstart="fun1(event)" data-marks=80>blue</li>
+
+
+</ul>
+<div id="d2" ondrop="drop2(event)" ondragover="dragover2(event)"></div>
+</body>
+</html>

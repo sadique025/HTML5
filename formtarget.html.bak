@@ -1,0 +1,15 @@
+<html>
+<body>
+<form id="form1" action="index.html" target="blank">
+
+Name:<input type="text" name="name"><br><br>
+Password:<input type="password" name="pass"><br><br>
+City:<input type="text" name="city"><br><br>
+Upload:<input type="file" name="file"><br><br>
+<input type="submit" value="submit"><br><br>
+<input type="submit" value="Admin submit" formtarget="_self"><br><br>
+
+
+</form>
+</body>
+</html>

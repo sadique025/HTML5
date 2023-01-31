@@ -1,0 +1,28 @@
+<html>
+<body>
+<canvas id="trails" width="500px" height="600px" style="border:1px solid;">
+</canvas>
+
+<script>
+
+function drawtrails()
+{
+var canvas=document.getElementById('trails');
+var context=canvas.getContext("2d");
+//context.save();
+//context.translate(130,250);
+
+context.drawImage(image1,60,40,200,200);
+context.stroke();
+}
+
+var image1=new Image();
+image1.src="a.jpg";
+image1.onload=function()
+{
+drawtrails();
+}
+
+</script>
+</body>
+</html>

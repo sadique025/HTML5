@@ -1,0 +1,38 @@
+<html>
+<body>
+<canvas id="mycanvas"  width="600" height="600" style="border:1px dotted;"></canvas>
+<script>
+
+window.onload=canvas;
+
+function canvas()
+{
+
+var mycanvas=document.getElementById("mycanvas");
+//if(mycanvas && mycanvas.getContxt("2d"))
+//{
+var context=mycanvas.getContext("2d");
+
+//context.translate(100,200);
+//context.linewidth=6;
+context.beginPath();
+context.moveTo(10,150);//(10,150)
+context.quadraticCurveTo(40,50,180,190);//(30,40,180,190)(80,190,150,120)
+context.lineWidth="5";
+context.strokeStyle="red";
+context.fillStyle="yellow";
+context.stroke();
+context.fill();
+
+//control pointercontent.lineWidth=1;
+context.beginPath();
+context.moveTo(10,150);//(10,150);
+context.lineTo(40,50);//(30,40)
+context.lineTo(180,190);//(180,190);
+context.strokeStyle="pink";
+context.stroke();
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body>
+<!--file extensions
+audio/*
+video/*
+image/*
+media type-->
+
+<form>
+
+Name:<input type="text" name="name"><br><br>
+Password:<input type="password" name="pass"><br><br>
+City:<input type="text" name="city"><br><br>
+Upload File:<input type="file" name="file" accept=""><br><br>
+<input type="submit" value="submit">
+
+
+
+</form>
+
+</body>
+</html>

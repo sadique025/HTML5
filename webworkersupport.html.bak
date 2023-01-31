@@ -1,0 +1,20 @@
+<html>
+<body>
+<script>
+
+function loadDemo(){
+if(typeof(worker)!=="undefined"){
+document.write("yes support");
+}
+else
+{
+document.write("does not support!....");
+}
+
+}
+loadDemo();
+
+
+</script>
+</body>
+</html>

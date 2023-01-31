@@ -1,0 +1,80 @@
+<html>
+<head>
+<style type="text/css">
+video{
+width:450px;
+height:300px;
+border: 2px solid blue;
+}
+</style>
+
+<script src="Util.js"></script>
+</head>
+<body>
+
+<video id="vd1" src="new folder/h.mkv" muted="true" controls="">
+</video>
+<br><br>
+
+<input type="button" value="play" id="btnplay"></input>
+<input type="button" value="forward" id="btnforward"></input>
+<input type="button" value="rewind" id="btnrwind"></input>
+
+<script>
+
+var btn1,btn2,btn3,video1;
+
+btn1=document.getElementById("btnplay");
+btn2=document.getElementById("btnforward");
+btn3=document.getElementById("btnrwnd");
+
+video1=document.getElementById("vd1");
+
+
+function videoPlay()
+{
+
+if(video1.paused)
+{
+
+video1.play();
+btn1.value="pause";
+
+}
+
+else if(video1.paused)
+
+{
+video.paused();
+btn1.value="play";
+}
+
+}
+
+function videoForward()
+{
+var value=10;
+video1.currentTime += value;
+}
+
+function videoRwnd()
+{
+var value=-10;
+video1.currentTime +=value;
+}
+
+function fun1()
+{
+btn.value="play";
+}
+
+EventUtil.addHandler(video1,"ended",fun1);
+EventUtil.addHandler(btn1,"click",videoPlay)
+EventUtil.addHandler(btn2,"click",videoForward);
+EventUtil.addHandler(btn3,"click",videoRwnd);
+
+
+
+</script>
+</body>
+</html>

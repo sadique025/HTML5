@@ -1,0 +1,19 @@
+<html>
+<body>
+<script>
+
+var Worker=new Worker('webdemo.js');
+worker.postMessage('hello world india');//send data to our worker
+
+worker.addEventListener('message',function(e){
+document.write('worker said:',e.data);
+console.log(e);
+},false);
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<h1>how to trace location</h1>
+<button onclick="geoLocation()">get location</button>
+<div id="output"></div>
+
+<script>
+
+var x=document.getElementById('output');
+
+function geoLocation(){
+//alert("hello");//for  testing pirpose
+if(navigator.geoLocation)
+{
+//x.innerHTML="supporting!!";
+
+navigator.geoLocation.getCurrentPosition(showPosition.showError);
+}
+else{
+//we will  print here values we got in postion object
+function showPosition(position){
+var localAPI="https://maps.googleapis.com/maps/api/geocode/json?lating="+position.coords.latitude+","+positio.coords.longitude+"&sensor=true";
+
+x.innerHTML=localAPI;
+$.get({
+//it takes object.we will pass url throghh objecturl:LocalApi;
+success:function(data){
+console.log(data);
+
+x.innerHTML=data.result[0].address_components[4].long_name+",";
+
+x.innerHTML=data.result[0].address_components[5].long_name+",";
+
+x.innerHTML=data.result[0].address_components[6].long_name+",";
+
+}
+});
+
+}
+
+}//end of function geolocation
+
+
+
+function showError(error){
+switch(error.code){
+case error.PERMISION_DENIED:
+x.innerHTML="user denied the requests for geolocation."
+break;
+
+case error.POSITION_UNAVAILABLE:
+x.innerHTML="location information is unavailable."
+break;
+
+case error.TIMEOUT:
+x.innerHTML="the requests to get user location time out.";
+break;
+
+case error.UNKNOWN_ERROR:
+x.innerHTML="an unknown error occurred."
+break;
+}
+
+}
+
+</script>
+</body>
+</html>

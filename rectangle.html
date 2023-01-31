@@ -1,0 +1,28 @@
+<html>
+<body>
+<canvas id="mycanvas" width="600" height="350" style="border:1px solid black">
+</canvas>
+<script>
+
+
+var c=document.getElementById("mycanvas");
+var ctx=c.getContext("2d");
+
+//red reactangle
+
+ctx.beginPath();
+ctx.lineWidth="6";
+ctx.strokeStyle="green";
+ctx.rect(40,40,200,200);
+ctx.fillStyle="lightgreen"
+ctx.stroke();
+ctx.fill();
+
+ctx.clearRect(50,50,80,60);
+ctx.strokeRect(50,50,80,60);
+
+
+
+</script>
+</body>
+</html>

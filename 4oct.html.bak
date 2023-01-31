@@ -1,0 +1,119 @@
+<html>
+<body>
+<canvas id="hello" height="600" width="700" style="border:solid 1px;">
+</canvas>
+<script>
+
+
+var a=document.getElementById("hello");
+var b=a.getContext('2d');
+
+
+b.beginPath();
+b.lineWidth="2";
+b.strokeStyle="black";
+b.rect(40,20,600,500);
+b.fillStyle="red";
+b.stroke();
+b.fill();
+
+
+b.beginPath();
+b.lineWidth="2";
+b.stokeStyle="black";
+b.rect(140,70,400,400);
+b.fillStyle="yellow";
+b.stroke();
+b.fill();
+
+
+
+b.beginPath();
+b.lineWidth="2";
+b.stokeStyle="black";
+b.rect(250,140,200,250);
+b.fillStyle="green";
+b.stroke();
+b.fill();
+
+
+
+b.beginPath();
+b.lineWidth="2";
+b.stokeStyle="black";
+b.rect(300,240,100,20);
+b.fillStyle="grey";
+b.stroke();
+b.fill();
+
+document.write("<br><br><br<br><hr><br><br>");
+</script>
+</body>
+</html>
+
+
+<html>
+<body>
+
+<svg height="150" width="600" style="border:solid 2px;">
+<text x="120" y="75" fill="red"
+stroke="orange"
+font-family="sans-serif"
+font-size="40px"
+font-weight="bold">Welcome to HTML5!</text>
+
+<br><br><br><hr>
+
+</body>
+</html>
+<canvas id="u"  height="300" width="500px" style="border: solid 1px;">
+</canvas>
+
+<script>
+
+var rr=document.getElementById('u');
+var tt=rr.getContext('2d');
+
+tt.rect(0,0,550,400)
+tt.fillStyle="orange";
+tt.stroke;
+tt.fill();
+</script>
+<br><br><hr>
+</body>
+</html>
+
+
+<html>
+<body>
+<canvas id="n" height="400" height="300" style="border:solid 1px;">
+</canvas>
+
+<script>
+
+
+function nn()
+{
+var ll=document.getElementById('n');
+var yu=ll.getContext('2d');
+
+yu.drawImage(image1,0,0,400,400);
+yu.stroke();
+}
+
+var image1=new Image();
+image1.src="a.jpg";
+image1.onload=function()
+{
+();
+
+}
+
+
+
+
+
+</script>
+
+</body>
+</html>
